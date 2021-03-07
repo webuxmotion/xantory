@@ -2,7 +2,7 @@
     "name": "tonephp/geomshop",
     "require": {
         "vlucas/valitron": "^1.4",
-        "vlucas/phpdotenv": "^5.3"
+        "vlucas/phpdotenv": "^4.0"
     },
     "autoload": {
         "psr-4": {
