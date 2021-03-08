@@ -17,4 +17,13 @@ class MainController extends AppController {
        
        $lang = Tone::$app->getProperty('lang');
     }
+
+    public function drawingAction() {
+    
+        View::setMeta(
+            __('page_title'),
+            'Xantory Games Development Company based in Ukraine for the world and people',
+            'Xantory, Xantory Games, Javascript Games'
+        );
+     }
 }

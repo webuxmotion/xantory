@@ -8,20 +8,23 @@ class ParticleText {
       height: 400,
     });
     this.animationDiv = document.getElementById('animation');
-    this.rows = 600;
-    this.cols = 200;
-    this.particleSize = 1;
-    this.particles = [];
 
-    this.container = new PIXI.ParticleContainer(15000);
-    this.app.stage.addChild(this.container);
-
-    this.addObjects();
-
-    this.animationDiv.appendChild(this.app.view);
-    this.animationDiv.classList.add('is-loaded');
-    
-    this.initCanvas();
+    if (this.animationDiv) {
+      this.rows = 600;
+      this.cols = 200;
+      this.particleSize = 1;
+      this.particles = [];
+  
+      this.container = new PIXI.ParticleContainer(15000);
+      this.app.stage.addChild(this.container);
+  
+      this.addObjects();
+  
+      this.animationDiv.appendChild(this.app.view);
+      this.animationDiv.classList.add('is-loaded');
+      
+      this.initCanvas();
+    }
   }
 
   addObjects() {
