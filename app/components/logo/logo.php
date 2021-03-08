@@ -1,1 +1,1 @@
-<a class="logo" href="/"><span>Tone</span><span>PHP</span></a>
+<a class="logo" href="/">Xantory</a>

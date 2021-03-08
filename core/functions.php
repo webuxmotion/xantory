@@ -3,7 +3,7 @@
 use core\base\Lang;
 
 function debug($arr) {
-    echo '<pre>' . print_r($arr, true) . '</pre>';
+    echo '<pre class="debug">' . print_r($arr, true) . '</pre>';
 }
 
 function upperCamelCase($name) {

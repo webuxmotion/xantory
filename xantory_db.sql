@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: geomshop-mysql-app:3306
--- Generation Time: Feb 17, 2021 at 09:14 PM
--- Server version: 5.7.32
+-- Generation Time: Mar 08, 2021 at 03:19 PM
+-- Server version: 5.7.33
 -- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -42,8 +42,8 @@ CREATE TABLE `lang` (
 
 INSERT INTO `lang` (`id`, `alias`, `code`, `title`, `base`) VALUES
 (3, 'ru', 'ru', 'Ru', '0'),
-(4, 'en', 'en', 'En', '0'),
-(5, 'ua', 'ua', 'Ua', '1');
+(4, 'en', 'en', 'En', '1'),
+(5, 'ua', 'ua', 'Ua', '0');
 
 -- --------------------------------------------------------
 
@@ -65,8 +65,8 @@ CREATE TABLE `menuitems` (
 
 INSERT INTO `menuitems` (`id`, `link`, `parent`, `alias`, `position`) VALUES
 (1, '/', 0, 'home', 0),
-(2, '/docs', 0, 'docs', 1),
-(3, '/contacts', 0, 'contacts', 2);
+(4, '/animations', 0, 'animations', 1),
+(5, '/animations/lines', 4, 'lines', 0);
 
 -- --------------------------------------------------------
 
@@ -87,14 +87,14 @@ CREATE TABLE `menuitems_translate` (
 
 INSERT INTO `menuitems_translate` (`id`, `menuitem_alias`, `lang_alias`, `value`) VALUES
 (1, 'home', 'ru', 'Главная'),
-(2, 'docs', 'ru', 'Документация'),
-(3, 'contacts', 'ru', 'Контакты'),
 (4, 'home', 'en', 'Main'),
-(5, 'contacts', 'en', 'Contacts'),
-(6, 'docs', 'en', 'Docs'),
 (7, 'home', 'ua', 'Головна'),
-(8, 'docs', 'ua', 'Документація'),
-(9, 'contacts', 'ua', 'Контакти');
+(10, 'animations', 'ru', 'Анимации'),
+(11, 'animations', 'en', 'Animations'),
+(12, 'animations', 'ua', 'Анімації'),
+(13, 'lines', 'ru', 'Линии'),
+(14, 'lines', 'en', 'Lines'),
+(15, 'lines', 'ua', 'Лінії');
 
 -- --------------------------------------------------------
 
@@ -194,13 +194,13 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT for table `menuitems`
 --
 ALTER TABLE `menuitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `menuitems_translate`
 --
 ALTER TABLE `menuitems_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `translate`

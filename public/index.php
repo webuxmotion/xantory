@@ -25,6 +25,7 @@ define("DEBUG", $_ENV['DEBUG']);
 new Tone;
 
 Router::add('^drawing$', ['controller' => 'Main', 'action' => 'drawing']);
+Router::add('^animations/(?P<alias>[a-z-]+)$', ['controller' => 'Animations', 'action' => 'page']);
 
 Router::add('^login$', ['controller' => 'User', 'action' => 'login']);
 Router::add('^signup$', ['controller' => 'User', 'action' => 'signup']);

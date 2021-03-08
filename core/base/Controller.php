@@ -12,6 +12,7 @@ abstract class Controller {
   public $layout;
   public $getMeta = null;
   public $vars = [];
+  public $scripts = '';
   public $tone;
 
   public function __construct($route) {
@@ -31,7 +32,12 @@ abstract class Controller {
 
   public function getView() {
     $viewObj = new View($this->route, $this->layout, $this->view);
+    $viewObj->scripts = $this->scripts;
     $viewObj->render($this->vars);
+  }
+
+  public function addScript($script) {
+    $this->scripts .= $script;
   }
 
   public function set($vars) {

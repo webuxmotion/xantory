@@ -9,6 +9,7 @@ class View {
   public $route = [];
   public $view;
   public $layout;
+  public $scripts = '';
   public static $meta = ['title' => '', 'desc' => '', 'keywords' => ''];
   protected static $exceptionCode = DEBUG ? 500 : 404;
 
@@ -42,6 +43,7 @@ class View {
     }
 
     $content = ob_get_clean();
+    $scripts = $this->scripts;
 
     if (false !== $this->layout) {
       $file_layout = APP . "/layouts/{$this->layout}.php";

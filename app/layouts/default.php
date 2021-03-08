@@ -8,15 +8,16 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   
   <link href="/dist/styles.css" rel="stylesheet">
+  
 </head>
 <body>
-  
+  <?=$this->component('header')?>
   <?=$content?>
   
   <script>
     var serverUrl = "<?=siteUrl()?>";
   </script>
-  
   <script src="/dist/app.js"></script>
+  <?=$scripts?>
 </body>
 </html>

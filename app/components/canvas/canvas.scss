@@ -1,0 +1,15 @@
+.canvas {
+  padding: 20px;
+
+  &__title {
+    color: gray;
+  }
+  
+  &__body {
+    padding-top: 10px;
+  }
+
+  canvas {
+    border: 1px solid #27292c;
+  }
+}

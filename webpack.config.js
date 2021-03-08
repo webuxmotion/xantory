@@ -4,6 +4,7 @@ module.exports = {
   entry: {
       app: ['./app/src/app.js'],
       admin: ['./app/src/admin.js'],
+      'a-lines': ['./app/pages/Animations/pages/lines/lines.js'],
   },
   output: {
     filename: '[name].js',
