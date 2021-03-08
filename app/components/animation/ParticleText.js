@@ -7,56 +7,37 @@ class ParticleText {
       width: 800, 
       height: 400,
     });
-    this.animationContainer = document.getElementById('animation');
+    this.animationDiv = document.getElementById('animation');
     this.rows = 600;
     this.cols = 200;
     this.particleSize = 1;
     this.particles = [];
 
-    this.container = new PIXI.ParticleContainer(120000);
+    this.container = new PIXI.ParticleContainer(15000);
     this.app.stage.addChild(this.container);
 
     this.addObjects();
 
-    this.animationContainer.appendChild(this.app.view);
-    this.animationContainer.classList.add('is-loaded');
+    this.animationDiv.appendChild(this.app.view);
+    this.animationDiv.classList.add('is-loaded');
+    
+    this.initCanvas();
   }
 
   addObjects() {
     this.app.loader.add('favicon', 'xantory-games-transparent.png').load((loader, resources) => {
 
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.width = this.rows * this.particleSize;
-      canvas.height = this.cols * this.particleSize;
-      ctx.drawImage(resources.favicon.data, 0, 0);
-
-      const hasFill = (x,y) => {
-        for (let i = 0; i < this.particleSize; i++) {
-          for (let j = 0; j < this.particleSize; j++) {
-            const imageData = ctx.getImageData(x + i, y + j, 1, 1);
-
-            if (
-              imageData.data[0] > 0 ||
-              imageData.data[1] > 0 ||
-              imageData.data[2] > 0
-            ) return true;
-          }
-        }
-
-        return false;
-      }
+      this.drawCanvas(resources.favicon.data);
 
       for (let i = 0; i < this.rows; i++) {
         for (let j = 0; j < this.cols; j++) {
 
-          const filled = hasFill(
+          const filled = this.hasFill(
             i * this.particleSize, 
             j * this.particleSize
           );
 
           if (filled) {
-
             let p = new Particle(
               i * this.particleSize, 
               j * this.particleSize, 
@@ -66,15 +47,41 @@ class ParticleText {
   
             this.particles.push(p);
             this.container.addChild(p.sprite);
-
           }
         }
       }
   
       this.animate();
 
-      this.animationContainer.classList.remove('is-loaded');
+      this.animationDiv.classList.remove('is-loaded');
     });
+  }
+
+  initCanvas() {
+    this.canvas = document.createElement('canvas');
+    this.canvasCtx = this.canvas.getContext('2d');
+    this.canvas.width = this.rows * this.particleSize;
+    this.canvas.height = this.cols * this.particleSize;
+  }
+
+  drawCanvas(data) {
+    this.canvasCtx.drawImage(data, 0, 0);
+  }
+
+  hasFill(x,y) {
+    for (let i = 0; i < this.particleSize; i++) {
+      for (let j = 0; j < this.particleSize; j++) {
+        const imageData = this.canvasCtx.getImageData(x + i, y + j, 1, 1);
+
+        if (
+          imageData.data[0] > 0 ||
+          imageData.data[1] > 0 ||
+          imageData.data[2] > 0
+        ) return true;
+      }
+    }
+
+    return false;
   }
 
   animate() {
