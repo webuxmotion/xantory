@@ -1,4 +1,4 @@
-import DrawCurve from '../../../DrawCurve';
+import DrawCurve from '../DrawCurve';
 
 class CurveThroughPoint extends DrawCurve {
   setCursorPosition() {

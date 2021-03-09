@@ -2,6 +2,11 @@
   height: 100%;
   list-style: none;
   display: flex;
+  z-index: 2;
+
+  ul {
+    position: absolute;
+  }
 
   &__nav-link {
     display: flex;

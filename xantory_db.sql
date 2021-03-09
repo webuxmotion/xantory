@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: geomshop-mysql-app:3306
--- Generation Time: Mar 08, 2021 at 03:19 PM
+-- Generation Time: Mar 09, 2021 at 06:38 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.2.2
 
@@ -66,7 +66,9 @@ CREATE TABLE `menuitems` (
 INSERT INTO `menuitems` (`id`, `link`, `parent`, `alias`, `position`) VALUES
 (1, '/', 0, 'home', 0),
 (4, '/animations', 0, 'animations', 1),
-(5, '/animations/lines', 4, 'lines', 0);
+(5, '/animations/lines', 4, 'lines', 0),
+(6, '/animations/gradient', 4, 'gradient', 2),
+(7, '/animations/other', 4, 'other', 3);
 
 -- --------------------------------------------------------
 
@@ -94,7 +96,13 @@ INSERT INTO `menuitems_translate` (`id`, `menuitem_alias`, `lang_alias`, `value`
 (12, 'animations', 'ua', 'Анімації'),
 (13, 'lines', 'ru', 'Линии'),
 (14, 'lines', 'en', 'Lines'),
-(15, 'lines', 'ua', 'Лінії');
+(15, 'lines', 'ua', 'Лінії'),
+(16, 'gradient', 'ru', 'Градиент'),
+(17, 'gradient', 'en', 'Gradient'),
+(18, 'gradient', 'ua', 'Градієнт'),
+(19, 'other', 'ru', 'Другое'),
+(20, 'other', 'en', 'Other'),
+(21, 'other', 'ua', 'Інше');
 
 -- --------------------------------------------------------
 
@@ -194,13 +202,13 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT for table `menuitems`
 --
 ALTER TABLE `menuitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `menuitems_translate`
 --
 ALTER TABLE `menuitems_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `translate`

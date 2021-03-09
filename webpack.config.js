@@ -5,6 +5,8 @@ module.exports = {
       app: ['./app/src/app.js'],
       admin: ['./app/src/admin.js'],
       'a-lines': ['./app/pages/Animations/pages/lines/lines.js'],
+      'a-gradient': ['./app/pages/Animations/pages/gradient/gradient.js'],
+      'a-other': ['./app/pages/Animations/pages/other/other.js'],
   },
   output: {
     filename: '[name].js',

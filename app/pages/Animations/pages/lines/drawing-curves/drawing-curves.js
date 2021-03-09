@@ -1,3 +1,3 @@
-import DrawCurve from '../../../DrawCurve';
+import DrawCurve from '../DrawCurve';
 
 new DrawCurve('drawing-curves');

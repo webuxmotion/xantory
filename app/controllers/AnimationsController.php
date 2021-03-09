@@ -24,7 +24,7 @@ class AnimationsController extends AppController {
     public function pageAction() {
         $alias = $this->route['alias'];
         $this->view = "pages/$alias/$alias";
-        $this->addScript('<script src="/dist/a-lines.js"></script>');
+        $this->addScript('<script src="/dist/a-' . $alias . '.js"></script>');
     
         View::setMeta(
             "Animations | " . $this->route['alias'],

@@ -1,9 +1,10 @@
 class MultiCurve {
   constructor() {
-    this.canvas = document.getElementById('multi-curve');
+    this.canvas = document.getElementById('multi-curve-2');
     this.context = this.canvas.getContext('2d');
     this.points = [];
     this.numPoints = 3;
+    this.ctrlPoint = {};
 
     this.showVariant();
     this.addClickListener();
@@ -40,16 +41,25 @@ class MultiCurve {
     this.context.beginPath();
     this.context.moveTo(this.points[0].x, this.points[0].y);
     
-    for (let i = 1; i < this.numPoints; i += 2) {
+    //curve through the rest, stopping at each midpoint
+    for (var i = 1; i < this.numPoints - 2; i++) {
+      this.ctrlPoint.x = (this.points[i].x + this.points[i+1].x) / 2;
+      this.ctrlPoint.y = (this.points[i].y + this.points[i+1].y) / 2;
 
       this.context.quadraticCurveTo(
         this.points[i].x, 
         this.points[i].y,
-        this.points[i + 1].x,
-        this.points[i + 1].y
+        this.ctrlPoint.x, 
+        this.ctrlPoint.y
       );
-
     }
+    //curve through the last two points
+    this.context.quadraticCurveTo(
+      this.points[i].x, 
+      this.points[i].y,
+      this.points[i+1].x, 
+      this.points[i+1].y
+    );
 
     this.context.strokeStyle = "blue";
     this.context.stroke();
@@ -60,11 +70,8 @@ class MultiCurve {
     this.context.moveTo(this.points[0].x, this.points[0].y);
     
     for (let i = 1; i < this.numPoints; i += 2) {
-
       this.context.lineTo(this.points[i].x, this.points[i].y);
       this.context.lineTo(this.points[i + 1].x, this.points[i + 1].y);
-      
-
     }
 
     this.context.strokeStyle = "red";

@@ -1,6 +1,8 @@
 import '../../utils';
 
-import '../lines/drawing-app/drawing-app';
-import '../lines/drawing-curves/drawing-curves';
-import '../lines/curve-through-point/curve-through-point';
-import '../lines/multi-curve/multi-curve';
+import './drawing-app/drawing-app';
+import './drawing-curves/drawing-curves';
+import './curve-through-point/curve-through-point';
+import './multi-curve/multi-curve';
+import './multi-curve-2/multi-curve-2';
+import './multi-curve-3/multi-curve-3';

@@ -21,3 +21,15 @@
   'id' => 'multi-curve',
   'title' => 'Multi Curve'
 ])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
+  'id' => 'multi-curve-2',
+  'title' => 'Multi Curve 2'
+])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
+  'id' => 'multi-curve-3',
+  'title' => 'Multi Curve 3'
+])?>
