@@ -33,3 +33,9 @@
   'id' => 'multi-curve-3',
   'title' => 'Multi Curve 3'
 ])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
+  'id' => 'custom-bezier',
+  'title' => 'Custom Bezier'
+])?>
