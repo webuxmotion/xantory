@@ -3,6 +3,7 @@
   $id = $id ?? 'default-id';
   $height = $height ?? 400;
   $width = $width ?? 400;
+  $log = $log ?? null;
 ?>
 
 <div class="canvas">
@@ -10,4 +11,7 @@
   <div class="canvas__body">
     <canvas id="<?=$id?>" width="<?=$width?>" height="<?=$height?>"></canvas>
   </div>
+  <?php if ($log): ?>
+    <textarea id="<?=$id?>-log" class="canvas__log"></textarea>
+  <?php endif; ?>
 </div>

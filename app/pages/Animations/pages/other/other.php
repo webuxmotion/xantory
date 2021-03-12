@@ -1,5 +1,13 @@
 <?=$this->component('canvas', [
   'width' => 800,
+  'height' => 800,
+  'id' => 'capture-touch',
+  'title' => 'Capture Touch',
+  'log' => true
+])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
   'id' => 'velocity',
   'title' => 'Velocity'
 ])?>
