@@ -1,4 +1,5 @@
 import Ball from '../../../ball';
+import Slider from '../../../slider';
 
 export default class CirclePathMovement {
     constructor() {
@@ -11,7 +12,11 @@ export default class CirclePathMovement {
       this.ball.radius = 10;
       this.pointsCount = 12;
       this.angle = 0;
-      this.speed = 0.001;
+
+      this.slider = new Slider(-0.005, 0.005, 0.001);
+      this.slider.x = 300;
+      this.slider.y = 20;
+      this.slider.captureMouse(this.canvas);
 
       this.drawFrame();
     }
@@ -26,13 +31,15 @@ export default class CirclePathMovement {
         this.ball.x = this.centerX + this.radius * Math.cos(angle + this.angle);
         this.ball.y = this.centerY + this.radius * Math.sin(angle + this.angle);
 
-        this.angle += this.speed;
+        this.angle += this.slider.value;
         if (this.angle < -1 * (Math.PI * 2)) {
           this.angle = 0;
         }
 
         this.ball.draw(this.context);
       }
+
+      this.slider.draw(this.context);
     }
   
     drawFrame() {
