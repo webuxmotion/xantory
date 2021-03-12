@@ -1,5 +1,6 @@
 import '../../utils';
 
+import './circle-points/circle-points';
 import './drawing-app/drawing-app';
 import './drawing-curves/drawing-curves';
 import './curve-through-point/curve-through-point';

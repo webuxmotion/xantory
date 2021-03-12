@@ -1,3 +1,8 @@
+
+
+
+
+
 /**
  * Normalize the browser animation API across implementations. This requests
  * the browser to schedule a repaint of the window for the next animation frame.

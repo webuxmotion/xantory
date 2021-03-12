@@ -1,5 +1,11 @@
 <?=$this->component('canvas', [
   'width' => 800,
+  'id' => 'circle-points',
+  'title' => 'Draw points on the circle'
+])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
   'id' => 'circle-path-movement',
   'title' => 'Move ball with circle path'
 ])?>
