@@ -1,5 +1,5 @@
 {
-    "name": "tonephp/geomshop",
+    "name": "tonephp/xantory",
     "require": {
         "vlucas/valitron": "^1.4",
         "vlucas/phpdotenv": "^4.0"

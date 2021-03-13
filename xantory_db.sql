@@ -2,7 +2,7 @@
 -- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: geomshop-mysql-app:3306
+-- Host: xantory-mysql-app:3306
 -- Generation Time: Mar 13, 2021 at 11:55 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.2.2
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `geomshop_db`
+-- Database: `xantory_db`
 --
 
 -- --------------------------------------------------------
