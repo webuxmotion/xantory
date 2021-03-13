@@ -36,6 +36,12 @@
             'title' => 'Images',
             'href' => '/admin/image'
           ])?>
+
+          <?=$this->component('admin/nav-item', [
+            'icon' => 'menu',
+            'title' => 'Main Menu',
+            'href' => '/admin/menu'
+          ])?>
           
           <?=$this->component('admin/nav-item', [
             'icon' => 'logout',

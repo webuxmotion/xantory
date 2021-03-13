@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: geomshop-mysql-app:3306
--- Generation Time: Mar 09, 2021 at 06:38 PM
+-- Generation Time: Mar 13, 2021 at 11:55 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.2.2
 
@@ -127,7 +127,10 @@ INSERT INTO `translate` (`id`, `alias`, `lang_alias`, `value`) VALUES
 (3, 'hero_description', 'ua', 'Веб-фреймворк з гарною документаціею'),
 (4, 'read_docs', 'en', 'Read docs'),
 (5, 'read_docs', 'ua', 'Читати документацію'),
-(6, 'read_docs', 'ru', 'Читать документацию');
+(6, 'read_docs', 'ru', 'Читать документацию'),
+(7, 'page_title', 'en', 'Xantory Games'),
+(8, 'page_title', 'ru', 'Xantory Games'),
+(9, 'page_title', 'ua', 'Xantory Games');
 
 -- --------------------------------------------------------
 
@@ -149,8 +152,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `email`, `name`, `role`) VALUES
-(3, 'admin', '$2y$10$hCua9/1FkRPW5A1VMCx7b.gbCaLsQjLgwLNlTt1i2T/9/2vh3hjq2', 'admin@admin.com', 'admin', 'user'),
-(4, 'user', '$2y$10$QQSaK7cIBkdN2VUMJNfbLOSr2HI5j0ZgCnXM.i6s27B07D.s4XTA2', 'user@user.com', 'user', 'user');
+(5, 'webuxmotion', '$2y$10$6HUkv4RO.Wnt4a57gIWVeefGOubjEc10lqspi65aKreY8lA.g/fM2', 'pereverziev.andrii@gmail.com', 'Andrii Pereverziev', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -214,13 +216,13 @@ ALTER TABLE `menuitems_translate`
 -- AUTO_INCREMENT for table `translate`
 --
 ALTER TABLE `translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

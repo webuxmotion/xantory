@@ -17,11 +17,11 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 RUN docker-php-ext-install -j$(nproc) mysqli pdo_mysql gd
 
 RUN mkdir /app \
- && mkdir /app/geomshop/
+ && mkdir /app/xantory/
 
-COPY . /app/geomshop/
+COPY . /app/xantory/
 
-RUN cp -r /app/geomshop/ /var/www/html/.
+RUN cp -r /app/xantory/ /var/www/html/.
 
 RUN ln -s /etc/apache2/mods-available/headers.load /etc/apache2/mods-enabled/
 

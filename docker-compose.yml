@@ -3,20 +3,20 @@ services:
   php:
     build:
       context: .
-    image: author/geomshop:1.0.0
+    image: author/xantory:1.0.0
     networks:
       - frontend
       - backend
     environment:
-      - MYSQL_HOST=geomshop-mysql-app
+      - MYSQL_HOST=xantory-mysql-app
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
-      - MYSQL_DB=geomshop_db
+      - MYSQL_DB=xantory_db
     volumes:
       - ./:/var/www/html/
     ports:
       - "50001:80"
-    container_name: geomshop-app
+    container_name: xantory-app
   mysql:
     image: mysql:5.7
     networks:
@@ -25,8 +25,8 @@ services:
       - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
-      - MYSQL_DATABASE=geomshop_db
-    container_name: geomshop-mysql-app
+      - MYSQL_DATABASE=xantory_db
+    container_name: xantory-mysql-app
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7
     depends_on:
@@ -36,11 +36,11 @@ services:
     ports:
       - "50002:80"
     environment:
-      - PMA_HOST=geomshop-mysql-app
+      - PMA_HOST=xantory-mysql-app
       - PMA_PORT=3306
     volumes:
       - /sessions
-    container_name: geomshop-phpmyadmin-app
+    container_name: xantory-phpmyadmin-app
 networks:
   frontend:
   backend:

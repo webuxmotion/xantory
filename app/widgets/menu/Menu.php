@@ -15,6 +15,7 @@ class Menu {
   protected $cache = 3600;
   protected $cacheKey = 'menu';
   protected $langAlias = '';
+  protected $className = 'w-menu';
 
   public function __construct($options = []) {
     $this->template = __DIR__ . '/templates/menu.php';
@@ -39,7 +40,7 @@ class Menu {
       $cache->set($this->cacheKey, $this->menuHtml, $this->cache);
     }
 
-    echo "<ul class='w-menu'>";
+    echo "<ul class='{$this->className}'>";
       echo $this->menuHtml;
     echo "</ul>";
   }
@@ -113,9 +114,7 @@ class Menu {
 
   protected function getOptions($options) {
     foreach ($options as $key => $value) {
-      if (property_exists($this, $key)) {
-        $this->$key = $value;
-      }
+      $this->$key = $value;
     }
   }
 }
