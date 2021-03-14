@@ -1,5 +1,11 @@
 <?=$this->component('canvas', [
   'width' => 800,
+  'id' => 'follow-mouse',
+  'title' => 'Follow mouse'
+])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
   'id' => 'velocity',
   'title' => 'Velocity'
 ])?>
