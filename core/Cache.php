@@ -6,6 +6,7 @@ class Cache {
   
   public function set($key, $data, $seconds = 3600) {
     $content['data'] = $data;
+    $content['key'] = $key;
     $content['end_time'] = time() + $seconds;
     $fileName = CACHE . '/' . md5($key) . '.txt';
 

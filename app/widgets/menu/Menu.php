@@ -16,6 +16,9 @@ class Menu {
   protected $cacheKey = 'menu';
   protected $langAlias = '';
   protected $className = 'w-menu';
+  protected $containerTag = 'ul';
+  protected $containerAttributes = '';
+  protected $upendElement = '';
 
   public function __construct($options = []) {
     $this->template = __DIR__ . '/templates/menu.php';
@@ -25,7 +28,6 @@ class Menu {
     $this->langAlias = $lang['alias'];
 
     $this->cacheKey = $this->cacheKey . $this->langAlias;
-
     $this->run();
   }
 
@@ -40,9 +42,10 @@ class Menu {
       $cache->set($this->cacheKey, $this->menuHtml, $this->cache);
     }
 
-    echo "<ul class='{$this->className}'>";
+    echo "<$this->containerTag $this->containerAttributes class='{$this->className}'>";
+      echo $this->upendElement;
       echo $this->menuHtml;
-    echo "</ul>";
+    echo "</$this->containerTag>";
   }
 
   protected function loadData() {

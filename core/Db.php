@@ -26,8 +26,9 @@ class Db {
 
   public function execute($sql, $params = []) {
     $statement = $this->pdo->prepare($sql);
+    $statement->execute($params);
 
-    return $statement->execute($params);
+    return $this->pdo->lastInsertId();
   }
 
   public function query($sql, $params = []) {

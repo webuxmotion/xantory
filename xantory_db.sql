@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: xantory-mysql-app:3306
--- Generation Time: Mar 13, 2021 at 11:55 AM
+-- Generation Time: Mar 14, 2021 at 05:34 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.2.2
 
@@ -204,13 +204,13 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT for table `menuitems`
 --
 ALTER TABLE `menuitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `menuitems_translate`
 --
 ALTER TABLE `menuitems_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `translate`
