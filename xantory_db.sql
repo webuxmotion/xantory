@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: xantory-mysql-app:3306
--- Generation Time: Mar 14, 2021 at 05:34 PM
+-- Generation Time: Mar 14, 2021 at 06:05 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.2.2
 
@@ -68,7 +68,8 @@ INSERT INTO `menuitems` (`id`, `link`, `parent`, `alias`, `position`) VALUES
 (4, '/animations', 0, 'animations', 1),
 (5, '/animations/lines', 4, 'lines', 0),
 (6, '/animations/gradient', 4, 'gradient', 2),
-(7, '/animations/other', 4, 'other', 3);
+(7, '/animations/other', 4, 'other', 3),
+(24, '/animations/velocity', 4, '-animations-velocity4', 999);
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,10 @@ INSERT INTO `menuitems_translate` (`id`, `menuitem_alias`, `lang_alias`, `value`
 (18, 'gradient', 'ua', 'Градієнт'),
 (19, 'other', 'ru', 'Другое'),
 (20, 'other', 'en', 'Other'),
-(21, 'other', 'ua', 'Інше');
+(21, 'other', 'ua', 'Інше'),
+(35, '-animations-velocity4', 'en', 'Velocity'),
+(36, '-animations-velocity4', 'ru', 'Скорость'),
+(37, '-animations-velocity4', 'ua', 'Швидкість');
 
 -- --------------------------------------------------------
 
@@ -204,13 +208,13 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT for table `menuitems`
 --
 ALTER TABLE `menuitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `menuitems_translate`
 --
 ALTER TABLE `menuitems_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `translate`
