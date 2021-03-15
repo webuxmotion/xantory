@@ -12,6 +12,11 @@
   canvas {
     border: 1px solid #27292c;
     background-color: #0c0c0c;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #50565e;
+    }
   }
 
   &__log {
