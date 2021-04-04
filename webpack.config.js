@@ -8,6 +8,7 @@ module.exports = {
       'a-gradient': ['./app/pages/Animations/pages/gradient/gradient.js'],
       'a-other': ['./app/pages/Animations/pages/other/other.js'],
       'a-velocity': ['./app/pages/Animations/pages/velocity/velocity.js'],
+      'a-charts': ['./app/pages/Animations/pages/charts/charts.js'],
   },
   output: {
     filename: '[name].js',
