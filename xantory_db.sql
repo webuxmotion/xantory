@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: xantory-mysql-app:3306
--- Generation Time: Mar 14, 2021 at 06:05 PM
--- Server version: 5.7.33
+-- Generation Time: Apr 04, 2021 at 08:58 PM
+-- Server version: 5.7.32
 -- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `xantory_db`
+-- Database: `geomshop_db`
 --
 
 -- --------------------------------------------------------
@@ -69,7 +69,8 @@ INSERT INTO `menuitems` (`id`, `link`, `parent`, `alias`, `position`) VALUES
 (5, '/animations/lines', 4, 'lines', 0),
 (6, '/animations/gradient', 4, 'gradient', 2),
 (7, '/animations/other', 4, 'other', 3),
-(24, '/animations/velocity', 4, '-animations-velocity4', 999);
+(24, '/animations/velocity', 4, '-animations-velocity4', 999),
+(25, '/animations/charts', 4, '-animations-charts4', 999);
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,10 @@ INSERT INTO `menuitems_translate` (`id`, `menuitem_alias`, `lang_alias`, `value`
 (21, 'other', 'ua', 'Інше'),
 (35, '-animations-velocity4', 'en', 'Velocity'),
 (36, '-animations-velocity4', 'ru', 'Скорость'),
-(37, '-animations-velocity4', 'ua', 'Швидкість');
+(37, '-animations-velocity4', 'ua', 'Швидкість'),
+(38, '-animations-charts4', 'en', 'Charts'),
+(39, '-animations-charts4', 'ru', 'Графики'),
+(40, '-animations-charts4', 'ua', 'Графики');
 
 -- --------------------------------------------------------
 
@@ -208,13 +212,13 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT for table `menuitems`
 --
 ALTER TABLE `menuitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `menuitems_translate`
 --
 ALTER TABLE `menuitems_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `translate`
