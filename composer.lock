@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b201352b37a69f628cd9e8ffe69b6f0",
+    "content-hash": "b5229dd64aa79160fc0d8c364ccd49d1",
     "packages": [
         {
             "name": "phpoption/phpoption",
@@ -153,6 +153,49 @@
                 }
             ],
             "time": "2021-01-07T16:49:33+00:00"
+        },
+        {
+            "name": "tonephp/tonephp",
+            "version": "0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonephp/tonephp.git",
+                "reference": "ec118a97920f05be0666342bad4d58494f7ab782"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonephp/tonephp/zipball/ec118a97920f05be0666342bad4d58494f7ab782",
+                "reference": "ec118a97920f05be0666342bad4d58494f7ab782",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0",
+                "vlucas/phpdotenv": "^4.0",
+                "vlucas/valitron": "^1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "core\\": "core",
+                    "app\\": "../../../app"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Pereverziev",
+                    "email": "pereverziev.andrii@gmail.com",
+                    "homepage": "https://www.tonephp.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/tonephp/tonephp/issues",
+                "source": "https://github.com/tonephp/tonephp/tree/0.1.7"
+            },
+            "time": "2021-05-06T21:41:19+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

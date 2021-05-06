@@ -12,7 +12,7 @@ class AnimationsController extends AppController {
         $model = new Animations();
         $items = $model->getAnimationsMenuItems();
     
-       View::setMeta(
+       $this->setMeta(
            "Animations",
            'Xantory Games Development Company based in Ukraine for the world and people',
            'Xantory, Xantory Games, Javascript Games'

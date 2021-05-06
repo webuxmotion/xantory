@@ -22,7 +22,7 @@ class AdminController extends Controller {
       
       if (!$this->isAdmin) {
         if (isAjax()) {
-          debug('errorsfdsfsf');
+          
         } else {
           redirect('/admin/user/login');
         }

@@ -1,13 +1,6 @@
 {
     "name": "tonephp/xantory",
     "require": {
-        "vlucas/valitron": "^1.4",
-        "vlucas/phpdotenv": "^4.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "core\\": "core",
-            "app\\": "app"
-        }
+        "tonephp/tonephp": "^0.1.7"
     }
 }

@@ -9,7 +9,7 @@ class MainController extends AppController {
     
     public function indexAction() {
     
-       View::setMeta(
+       $this->setMeta(
            __('page_title'),
            'Xantory Games Development Company based in Ukraine for the world and people',
            'Xantory, Xantory Games, Javascript Games'
@@ -20,7 +20,7 @@ class MainController extends AppController {
 
     public function drawingAction() {
     
-        View::setMeta(
+        $this->setMeta(
             __('page_title'),
             'Xantory Games Development Company based in Ukraine for the world and people',
             'Xantory, Xantory Games, Javascript Games'
