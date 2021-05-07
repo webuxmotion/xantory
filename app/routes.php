@@ -15,7 +15,3 @@ Router::add('^docs/(?P<alias>[a-z-]+)$', ['controller' => 'Docs']);
 Router::add('^admin$', ['prefix' => 'admin', 'controller' => 'Main', 'action' => 'index']);
 
 Router::add('^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?/?(?P<alias>[0-9a-z-]+)?$', ['prefix' => 'admin']);
-
-// default routes
-Router::add('^$', ['controller' => 'Main', 'action' => 'index']);
-Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');

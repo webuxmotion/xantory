@@ -1,6 +1,6 @@
 {
     "name": "tonephp/xantory",
     "require": {
-        "tonephp/tonephp": "^0.1.7"
+        "tonephp/tonephp": "0.1.8"
     }
 }
