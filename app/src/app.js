@@ -9,7 +9,11 @@ import '../components/drawing/drawing';
 const getSite = async () => {
   try {
     const siteUrl = "https://shafa.ua/women?search_text=Dior&sort=4";
-    const result = await axios.get(siteUrl);
+    const result = await axios.get(siteUrl, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    });
   
     console.log('result', result);
   } catch (error) {
