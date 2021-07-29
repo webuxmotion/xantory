@@ -8,6 +8,8 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   
   <link href="/dist/styles.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100&display=swap" rel="stylesheet">
   
 </head>
 <body>
