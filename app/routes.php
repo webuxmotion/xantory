@@ -2,6 +2,8 @@
 
 use core\Router;
 
+Router::add('^poetry$', ['controller' => 'Main', 'action' => 'poetry']);
+
 Router::add('^drawing$', ['controller' => 'Main', 'action' => 'drawing']);
 Router::add('^animations/(?P<alias>[a-z-]+)$', ['controller' => 'Animations', 'action' => 'page']);
 

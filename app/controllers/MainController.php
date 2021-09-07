@@ -26,4 +26,10 @@ class MainController extends AppController {
             'Xantory, Xantory Games, Javascript Games'
         );
      }
+
+    public function poetryAction() {
+        $this->setMeta(
+            'Автор стихов - Андрей Переверзев'
+        );
+    }
 }
