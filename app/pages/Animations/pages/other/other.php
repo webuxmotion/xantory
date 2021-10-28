@@ -1,3 +1,5 @@
+<?=$this->loadView('pages/Animations/pages/other/logo-animation/logo-animation')?>
+
 <?=$this->component('canvas', [
   'width' => 800,
   'id' => 'motorcycle',
