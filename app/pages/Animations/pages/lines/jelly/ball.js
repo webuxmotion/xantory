@@ -4,11 +4,22 @@ export default class Ball {
     this.y = y || 0;
     this.radius = radius || 2;
     this.color = color || '#ff6600';
+
+    this.vx = 0;
+    this.vy = 0;
   }
 
   setPosition(x, y) {
     this.x = x;
     this.y = y;
+  }
+
+  think(mouse) {
+    const dx = this.x - mouse.x;
+    const dy = this.y - mouse.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    this.x += this.vx;
+    this.y += this.vy;
   }
 
   draw(ctx) {

@@ -9,7 +9,7 @@ if (canvas) {
   const balls = [];
   const mouseBall = new Ball(0, 0, 30, 'green');
 
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 1; i++) {
     balls.push(
       new Ball(
         Math.random() * canvas.clientWidth,
@@ -25,6 +25,7 @@ if (canvas) {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
     balls.forEach((ball) => {
+      ball.think(mouse);
       ball.draw(ctx);
     });
 
