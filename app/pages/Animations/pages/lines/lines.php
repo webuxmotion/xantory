@@ -1,5 +1,11 @@
 <?=$this->component('canvas', [
   'width' => 800,
+  'id' => 'jelly',
+  'title' => 'Jelly Effect'
+])?>
+
+<?=$this->component('canvas', [
+  'width' => 800,
   'id' => 'circle-points',
   'title' => 'Draw points on the circle'
 ])?>
