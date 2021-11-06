@@ -9,7 +9,7 @@ if (canvas) {
   const balls = [];
   const mouseBall = new Ball(0, 0, 30, 'green');
 
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 2000; i++) {
     balls.push(
       new Ball(
         Math.random() * canvas.clientWidth,
