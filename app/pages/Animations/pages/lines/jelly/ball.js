@@ -7,6 +7,7 @@ export default class Ball {
 
     this.vx = 0;
     this.vy = 0;
+    this.friction = 0.8;
   }
 
   setPosition(x, y) {
@@ -25,8 +26,12 @@ export default class Ball {
 
       this.vx += tx - this.x;
       this.vy += ty - this.y;
-      console.log(dist, angle);
     }
+
+    this.vx *= this.friction;
+    this.vy *= this.friction;
+
+
     this.x += this.vx;
     this.y += this.vy;
   }
