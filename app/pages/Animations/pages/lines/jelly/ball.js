@@ -18,6 +18,15 @@ export default class Ball {
     const dx = this.x - mouse.x;
     const dy = this.y - mouse.y;
     const dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < 30) {
+      const angle = Math.atan2(dy, dx);
+      const tx = mouse.x + Math.cos(angle) * 30;
+      const ty = mouse.y + Math.sin(angle) * 30;
+
+      this.vx += tx - this.x;
+      this.vy += ty - this.y;
+      console.log(dist, angle);
+    }
     this.x += this.vx;
     this.y += this.vy;
   }
