@@ -4,13 +4,14 @@ export default class Ball {
     this.y = y || 0;
     this.originalX = x || 0;
     this.originalY = y || 0;
-    this.radius = radius || 4;
+    this.radius = radius || 5;
     this.color = color || '#ff6600';
+    this.mouseRadius = 50;
 
     this.vx = 0;
     this.vy = 0;
-    this.friction = 0.8;
-    this.springFactor = 0.4;
+    this.friction = 0.4;
+    this.springFactor = 0.1;
   }
 
   setPosition(x, y) {
@@ -23,10 +24,10 @@ export default class Ball {
     const dy = this.y - mouse.y;
     const dist = Math.sqrt(dx * dx + dy * dy);
 
-    if (dist < 30) {
+    if (dist < this.mouseRadius) {
       const angle = Math.atan2(dy, dx);
-      const tx = mouse.x + Math.cos(angle) * 30;
-      const ty = mouse.y + Math.sin(angle) * 30;
+      const tx = mouse.x + Math.cos(angle) * this.mouseRadius;
+      const ty = mouse.y + Math.sin(angle) * this.mouseRadius;
 
       this.vx += tx - this.x;
       this.vy += ty - this.y;
