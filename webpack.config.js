@@ -5,6 +5,7 @@ module.exports = {
       app: ['./app/src/app.js'],
       admin: ['./app/src/admin.js'],
       'a-lines': ['./app/pages/Animations/pages/lines/lines.js'],
+      'a-jelly': ['./app/pages/Animations/pages/jelly/jelly.js'],
       'a-gradient': ['./app/pages/Animations/pages/gradient/gradient.js'],
       'a-other': ['./app/pages/Animations/pages/other/other.js'],
       'a-velocity': ['./app/pages/Animations/pages/velocity/velocity.js'],

@@ -1,3 +1,9 @@
+<ul>
+  <li>
+    <a href="/animations/jelly">Jelly</a>
+  </li>
+</ul>
+
 <?=$this->loadView('pages/Animations/pages/other/logo-animation/logo-animation')?>
 
 <?=$this->component('canvas', [
