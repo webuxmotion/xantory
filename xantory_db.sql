@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: xantory-mysql-app:3306
--- Generation Time: Apr 04, 2021 at 08:58 PM
--- Server version: 5.7.32
+-- Generation Time: May 07, 2022 at 09:44 AM
+-- Server version: 5.7.38
 -- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `geomshop_db`
+-- Database: `xantory_db`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +41,6 @@ CREATE TABLE `lang` (
 --
 
 INSERT INTO `lang` (`id`, `alias`, `code`, `title`, `base`) VALUES
-(3, 'ru', 'ru', 'Ru', '0'),
 (4, 'en', 'en', 'En', '1'),
 (5, 'ua', 'ua', 'Ua', '0');
 
@@ -70,7 +69,8 @@ INSERT INTO `menuitems` (`id`, `link`, `parent`, `alias`, `position`) VALUES
 (6, '/animations/gradient', 4, 'gradient', 2),
 (7, '/animations/other', 4, 'other', 3),
 (24, '/animations/velocity', 4, '-animations-velocity4', 999),
-(25, '/animations/charts', 4, '-animations-charts4', 999);
+(25, '/animations/charts', 4, '-animations-charts4', 999),
+(26, '/experiments', 0, 'experiments', 2);
 
 -- --------------------------------------------------------
 
@@ -90,27 +90,22 @@ CREATE TABLE `menuitems_translate` (
 --
 
 INSERT INTO `menuitems_translate` (`id`, `menuitem_alias`, `lang_alias`, `value`) VALUES
-(1, 'home', 'ru', 'Главная'),
 (4, 'home', 'en', 'Main'),
 (7, 'home', 'ua', 'Головна'),
-(10, 'animations', 'ru', 'Анимации'),
 (11, 'animations', 'en', 'Animations'),
 (12, 'animations', 'ua', 'Анімації'),
-(13, 'lines', 'ru', 'Линии'),
 (14, 'lines', 'en', 'Lines'),
 (15, 'lines', 'ua', 'Лінії'),
-(16, 'gradient', 'ru', 'Градиент'),
 (17, 'gradient', 'en', 'Gradient'),
 (18, 'gradient', 'ua', 'Градієнт'),
-(19, 'other', 'ru', 'Другое'),
 (20, 'other', 'en', 'Other'),
 (21, 'other', 'ua', 'Інше'),
 (35, '-animations-velocity4', 'en', 'Velocity'),
-(36, '-animations-velocity4', 'ru', 'Скорость'),
 (37, '-animations-velocity4', 'ua', 'Швидкість'),
 (38, '-animations-charts4', 'en', 'Charts'),
-(39, '-animations-charts4', 'ru', 'Графики'),
-(40, '-animations-charts4', 'ua', 'Графики');
+(40, '-animations-charts4', 'ua', 'Графики'),
+(41, 'experiments', 'ua', 'Експерименти'),
+(42, 'experiments', 'en', 'Experiments');
 
 -- --------------------------------------------------------
 
@@ -131,13 +126,10 @@ CREATE TABLE `translate` (
 
 INSERT INTO `translate` (`id`, `alias`, `lang_alias`, `value`) VALUES
 (1, 'hero_description', 'en', 'Web-framework with good documentation!'),
-(2, 'hero_description', 'ru', 'Веб-фреймворк с хорошей документацией'),
 (3, 'hero_description', 'ua', 'Веб-фреймворк з гарною документаціею'),
 (4, 'read_docs', 'en', 'Read docs'),
 (5, 'read_docs', 'ua', 'Читати документацію'),
-(6, 'read_docs', 'ru', 'Читать документацию'),
 (7, 'page_title', 'en', 'Xantory Games'),
-(8, 'page_title', 'ru', 'Xantory Games'),
 (9, 'page_title', 'ua', 'Xantory Games');
 
 -- --------------------------------------------------------
@@ -154,13 +146,6 @@ CREATE TABLE `user` (
   `name` varchar(255) NOT NULL,
   `role` enum('user','admin') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `login`, `password`, `email`, `name`, `role`) VALUES
-(5, 'webuxmotion', '$2y$10$6HUkv4RO.Wnt4a57gIWVeefGOubjEc10lqspi65aKreY8lA.g/fM2', 'pereverziev.andrii@gmail.com', 'Andrii Pereverziev', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -212,13 +197,13 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT for table `menuitems`
 --
 ALTER TABLE `menuitems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `menuitems_translate`
 --
 ALTER TABLE `menuitems_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `translate`

@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ PixelMove)\n/* harmony export */ });\n/* harmony import */ var _Canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Canvas */ \"./app/pages/Animations/pages/charts/telegram-chart/Canvas.js\");\n\n\nclass PixelMove {\n  constructor() {\n    this.canvas = document.getElementById('telegram-chart');\n    this.context = this.canvas.getContext('2d');\n    \n    new _Canvas__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n      canvas: this.canvas,\n      context: this.context,\n      data: [\n        [0, 0],\n        [200, 100],\n        [400, 50],\n        [600, 500],\n        [800, 400],\n      ]\n    });\n  }\n\n  draw() {\n    this.clearRect();\n  }\n\n  drawFrame() {\n    window.requestAnimationFrame(\n      this.drawFrame.bind(this, this.canvas)\n    );\n\n    this.draw();\n  }\n\n  clearRect() {\n    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);\n  }\n}\n\nnew PixelMove;\n\n//# sourceURL=webpack://tonephp/./app/pages/Animations/pages/charts/telegram-chart/telegram-chart.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ PixelMove)\n/* harmony export */ });\n/* harmony import */ var _Canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Canvas */ \"./app/pages/Animations/pages/charts/telegram-chart/Canvas.js\");\n\n\nclass PixelMove {\n  constructor() {\n    this.canvas = document.getElementById('telegram-chart');\n    this.context = this.canvas.getContext('2d');\n    \n    new _Canvas__WEBPACK_IMPORTED_MODULE_0__.default({\n      canvas: this.canvas,\n      context: this.context,\n      data: [\n        [0, 0],\n        [200, 100],\n        [400, 50],\n        [600, 500],\n        [800, 400],\n      ]\n    });\n  }\n\n  draw() {\n    this.clearRect();\n  }\n\n  drawFrame() {\n    window.requestAnimationFrame(\n      this.drawFrame.bind(this, this.canvas)\n    );\n\n    this.draw();\n  }\n\n  clearRect() {\n    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);\n  }\n}\n\nnew PixelMove;\n\n//# sourceURL=webpack://tonephp/./app/pages/Animations/pages/charts/telegram-chart/telegram-chart.js?");
 
 /***/ })
 
@@ -48,9 +48,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {

@@ -10,6 +10,7 @@ module.exports = {
       'a-other': ['./app/pages/Animations/pages/other/other.js'],
       'a-velocity': ['./app/pages/Animations/pages/velocity/velocity.js'],
       'a-charts': ['./app/pages/Animations/pages/charts/charts.js'],
+      'exp-common': ['./app/pages/Experiments/pages/common/common.js'],
   },
   output: {
     filename: '[name].js',

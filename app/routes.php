@@ -6,6 +6,7 @@ Router::add('^poetry$', ['controller' => 'Main', 'action' => 'poetry']);
 
 Router::add('^drawing$', ['controller' => 'Main', 'action' => 'drawing']);
 Router::add('^animations/(?P<alias>[a-z-]+)$', ['controller' => 'Animations', 'action' => 'page']);
+Router::add('^experiments/(?P<alias>[a-z-]+)$', ['controller' => 'Experiments', 'action' => 'page']);
 
 Router::add('^login$', ['controller' => 'User', 'action' => 'login']);
 Router::add('^signup$', ['controller' => 'User', 'action' => 'signup']);
