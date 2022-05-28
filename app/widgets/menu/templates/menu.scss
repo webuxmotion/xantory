@@ -4,8 +4,17 @@
   display: flex;
   z-index: 2;
 
+  li:hover {
+    & > ul {
+      display: block;
+    }
+  }
+
   ul {
     position: absolute;
+    list-style: none;
+    background-color: $dark-grey;
+    display: none;
   }
 
   &__nav-link {
@@ -14,6 +23,8 @@
     align-items: center;
     padding-right: 20px;
     padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     font-size: 20px;
     color: transparentize($color: #ffffff, $amount: 0.2);
