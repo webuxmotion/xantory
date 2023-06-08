@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+.score {
+  position: absolute;
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+  user-select: none;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  padding: 16px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
